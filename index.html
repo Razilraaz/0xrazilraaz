@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penetration Tester Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #1e90ff, #00bcd4);
+            padding: 30px;
+            text-align: center;
+            color: #fff;
+        }
+        header img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #fff;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #00796b;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff5722;
+        }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #00796b;
+        }
+        .project, .certification, .blog-post {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #00796b, #004d40);
+            color: #fff;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #1e90ff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\Razil\Downloads\hacking.png" alt=" Profile Picture">
+        <h1>Razil Raaz</h1>
+        <p>Professional Penetration Tester</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I’m Razil Raaz, a passionate penetration tester with a deep interest in cybersecurity and ethical hacking. My goal is to help businesses identify and address security vulnerabilities before malicious actors can exploit them. With a strong background in penetration testing, vulnerability assessments, and security audits, I specialize in uncovering weaknesses in networks, applications, and systems.
+
+            I thrive in challenging environments and am dedicated to staying up-to-date with the latest security trends, tools, and techniques. I approach each project with a methodical mindset, combining technical expertise and ethical practices to provide actionable insights and recommendations that enhance an organization’s security posture. Proficient in tools like Metasploit, Burp Suite, and Nessus, with a strong foundation in ethical hacking and cybersecurity best practices.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Web Application Security Assessment</h3>
+            <p>Performed a comprehensive security assessment of a financial web application, identifying critical vulnerabilities such as SQL injection and cross-site scripting (XSS). Delivered actionable recommendations to mitigate risks.</p>
+        </div>
+        <div class="project">
+            <h3>Network Penetration Test</h3>
+            <p>Executed a network penetration test for a mid-sized company, uncovering misconfigurations and weaknesses in firewalls and wireless networks. Enhanced the overall security posture by implementing secure configurations.</p>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certification">
+            <h3>Certified Ethical Hacker (CEH)</h3>
+            <p>Recognized for expertise in ethical hacking methodologies and tools to identify and mitigate cybersecurity threats.</p>
+        </div>
+        <div class="certification">
+            <h3>CompTIA Security+</h3>
+            <p>Validated foundational skills in network security, cryptography, and system security practices.</p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div id="blog-container"></div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:razilhamza422@gmail.com">razilhamza422@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/rahul-v-s-2443ab292" target="_blank">linkedin.com/in/Rahul</a></p>
+        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/RVS1122</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Razil Raaz. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const blogs = [
+        {
+                title: "How to Perform Secure Code Reviews",
+                date: "November 11, 2024",
+                summary: "Best practices and techniques for secure code analysis.",
+                link: "#"
+            },
+            
+            {
+                title: "Top 10 Tools for Ethical Hacking",
+                date: "December 2, 2024",
+                summary: "A detailed guide on the top tools for penetration testers.",
+                link: "blog.html"
+            }
+           
+        ];
+
+        const blogContainer = document.getElementById('blog-container');
+        blogs.forEach(blog => {
+            const blogPost = document.createElement('div');
+            blogPost.className = 'blog-post';
+            blogPost.innerHTML = `
+                <h3>${blog.title}</h3>
+                <p><strong>Date:</strong> ${blog.date}</p>
+                <p>${blog.summary}</p>
+                <a href="${blog.link}" target="_blank">Read more</a>
+            `;
+            blogContainer.appendChild(blogPost);
+        });
+    </script>
+</body>
+</html>
+
+
+
